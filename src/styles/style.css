@@ -1,0 +1,85 @@
+*{
+  color:#FFF;
+  font-family: sans-serif;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+body{
+  background-color: #000;
+  margin:0;
+}
+
+body>.page-content{
+  z-index:1;
+  padding: .4rem;
+  min-height: 80vh;
+}
+
+body>div#backgrounds>img{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: contrast(1.2) brightness(.2) blur(2px);
+  z-index:-1;
+}
+body>div#backgrounds>img.background-mobile,
+body>div#backgrounds>img.background-xl{
+  transition: .4s ease opacity;
+  opacity:0;
+}
+
+@media (min-aspect-ratio: 16/8) {
+  body>div#backgrounds>img.background-xl{
+    opacity:1;
+  }
+}
+
+@media (max-aspect-ratio: 10/16) {
+  body>div#backgrounds>img.background-mobile{
+    opacity:1;
+  }
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  min-height: 30vh;
+}
+footer>div{
+  position: sticky;
+  top: 80vh;
+  height: 0;
+  width:100vw;
+}
+footer>div>div{
+  position: relative;
+  white-space: nowrap;
+  height: auto;
+  text-align: center;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+footer>div>div>img:first-child{
+  margin-left: 50px;
+}
+footer>div>div>img:last-child{
+  margin-right: 50px;
+}
+
+footer>div>div>img{
+  transform:scale(.8);
+  transition:.4s ease transform;
+}
+footer>div>div>img:hover{
+  transform:scale(1.1);
+  transition:.4s ease transform;
+}

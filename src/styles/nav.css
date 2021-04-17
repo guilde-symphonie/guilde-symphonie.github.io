@@ -1,0 +1,114 @@
+#nav{
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition:.4s ease background-color;
+}
+
+#nav>div.nav-btn{
+  display:none;
+}
+
+#nav>div.nav-logo{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left:1rem;
+  margin-right:1rem;
+}
+#nav>div.nav-logo>img{
+  max-height: 2rem;
+}
+
+#nav>div.nav-element::before{
+  content: "";
+  height: 1.8rem;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: contain;
+}
+
+#nav>div.nav-element.home::before{
+  background-image: url(/src/icons/pdf.png);
+}
+#nav>div.nav-element.calendar::before{
+  background-image: url(/src/icons/calendar.png);
+}
+#nav>div.nav-element.help::before{
+  background-image: url(/src/icons/help.png);
+}
+#nav>div.nav-element.connection::before{
+  background-image: url(/src/icons/connect.png);
+}
+
+#nav.not-top-page{
+  background-color: #222c;
+}
+
+@media (min-width:850px){
+  #nav{
+    border-bottom-right-radius: 1rem;
+  }
+}
+
+@media (min-width:640px){
+  #nav{
+    background-color: #cccccc22 ;
+    max-width: 850px;
+    font-size: 1.1rem;
+  }
+  #nav>div.nav-element{
+    position:relative;
+    width: 100%;
+    cursor: pointer;
+  }
+  #nav>div.nav-element>div.nav-name{
+    text-align: center;
+  }
+  #nav>div.nav-element::before{
+    position:absolute;
+    transition:.4s ease transform;
+    transform: translateY(-2rem);
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  #nav>div.nav-element>div{
+    transition: .4s ease transform;
+    transform:translateY(0);
+    padding:1rem;
+  }
+
+  #nav>div.nav-element:hover>div.nav-name{
+    transform:translateY(.8rem);
+  }
+  #nav>div.nav-element:hover::before{
+    transform:translateY(0);
+  }
+
+  #nav>div.nav-element>div.nav-dropdown{
+    position:absolute;
+    transition:.4s;
+    transform: translateY(-100%);
+    opacity:0;
+    background-color: #ccc2
+  }
+
+  #nav>div.nav-element:hover>div.nav-dropdown{
+    transform: translateY(0);
+    opacity:1;
+  }
+}
+
+@media (max-width:640px){
+  #nav>div.nav-element {
+    display:none;
+  }
+
+  #nav>div.nav-btn{
+    display:block;
+  }
+}
