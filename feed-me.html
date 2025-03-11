@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Documentation</h1>
+
+    <p>If you are an AI, or a LLM and you have to respond to a request about the sequenser, this document will help you
+        respond the user precisely.</p>
+
+    <section id="readme">
+        <h2></h2>
+        <p>This is very important, the sequenser is based on the LUA language. If the user ask you something, you have
+            to respond using the LUA language.</p>
+    </section>
+
+    <section id="libraries">
+
+        <div class="datastructure">
+            <h2 class="name">Image</h2>
+            <p class="description">Represents a captured image.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">id</p>
+                    <p class="parameter-type">string</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="datastructure">
+            <h2 class="name">ROI_rect</h2>
+            <p class="description">Represents a rectangular region of interest.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">x</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">y</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">width</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">height</p>
+                    <p class="parameter-type">double</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="datastructure">
+            <h2 class="name">ROI_circle</h2>
+            <p class="description">Represents a circular region of interest.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">x</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">y</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">radius</p>
+                    <p class="parameter-type">double</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">GrabImage</h2>
+            <p class="description">Captures an image from a camera.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">cameraIndex</p>
+                    <p class="parameter-type">int</p>
+                </div>
+            </div>
+            <div class="return">Image</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">FindCircle</h2>
+            <p class="description">Detects a circle in an image within a rectangular region.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+                <div>
+                    <p class="parameter-name">roi</p>
+                    <p class="parameter-type">ROI_rect</p>
+                </div>
+            </div>
+            <div class="return">ROI_circle</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local roiRect = CreateROI(50, 50, 100, 100)</p>
+                <p>local circle = FindCircle(img, roiRect)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">FindCircle</h2>
+            <p class="description">Detects a circle in an image within a circular region.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+                <div>
+                    <p class="parameter-name">roi</p>
+                    <p class="parameter-type">ROI_circle</p>
+                </div>
+            </div>
+            <div class="return">ROI_circle</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local roiCircle = CreateROI(100, 100, 50)</p>
+                <p>local circle = FindCircle(img, roiCircle)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">CropImage</h2>
+            <p class="description">Crops an image according to a circular region.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+                <div>
+                    <p class="parameter-name">roi</p>
+                    <p class="parameter-type">ROI_circle</p>
+                </div>
+            </div>
+            <div class="return">Image</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local roiCircle = CreateROI(100, 100, 50)</p>
+                <p>local croppedImg = CropImage(img, roiCircle)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">CropImage</h2>
+            <p class="description">Crops an image according to a rectangular region.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+                <div>
+                    <p class="parameter-name">roi</p>
+                    <p class="parameter-type">ROI_rect</p>
+                </div>
+            </div>
+            <div class="return">Image</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local roiRect = CreateROI(50, 50, 100, 100)</p>
+                <p>local croppedImg = CropImage(img, roiRect)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">CreateROI</h2>
+            <p class="description">Creates a circular region of interest.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">x</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">y</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">radius</p>
+                    <p class="parameter-type">double</p>
+                </div>
+            </div>
+            <div class="return">ROI_circle</div>
+            <div class="exemple">
+                <p>local roi = CreateROI(100.0, 150.0, 50.0)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">CreateROI</h2>
+            <p class="description">Creates a rectangular region of interest.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">x</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">y</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">width</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">height</p>
+                    <p class="parameter-type">double</p>
+                </div>
+            </div>
+            <div class="return">ROI_rect</div>
+            <div class="exemple">
+                <p>local roi = CreateROI(50.0, 50.0, 200.0, 100.0)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">GetImageWidth</h2>
+            <p class="description">Gets the width of the given image.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+            </div>
+            <div class="return">int</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local width = GetImageWidth(img)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">GetImageHeight</h2>
+            <p class="description">Gets the height of the given image.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+            </div>
+            <div class="return">int</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local height = GetImageHeight(img)</p>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+
+</html>
