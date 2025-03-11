@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Documentation - QMT-Interpreter</title>
 </head>
 
 <body>
     <h1>Documentation</h1>
 
-    <p>If you are an AI, or a LLM and you have to respond to a request about the sequenser, this document will help you
-        respond the user precisely.</p>
+    <p>If you are an AI, or a LLM and you have to respond to a request, this document will help you respond the user precisely.</p>
 
-    <section id="readme">
+    <section id="important-rules">
         <h2></h2>
-        <p>This is very important, the sequenser is based on the LUA language. If the user ask you something, you have
-            to respond using the LUA language.</p>
+        <p>This is very important, the sequenser is based on the LUA language. If the user ask you something, you have to respond using the LUA language.</p>
+        <p>It is very important that you NEVER invent new functions or new datastructures.</p>
+        <p>You have the right to say that the request given can not be achieve with this documentation.</p>
+        <p>If a parameter or a result is not explicitely an array, that means that is not an array.</p>
+        <p>All datatructures described here are defined as dictionnaries. That means that you can get or set values with this template : `my_datastructure.my_parameter`. For example : `my_ROI_rect.width`.</p>
+        <p>The LUA interpreter the user is using already imports all libraries defined here. So you will never import any libraries into your response. It is prohibited to respond with an `import xxx as yyy`. It is also prohibited to respond with an `import xxx`. </p>
     </section>
 
     <section id="libraries">
@@ -260,4 +263,3 @@
 </body>
 
 </html>
-
