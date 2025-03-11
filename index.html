@@ -35,6 +35,22 @@
 
     <section id="libraries">
 
+
+        <div class="datastructure">
+            <h2 class="name">Point</h2>
+            <p class="description">Represents a point in a 2D plane.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">x</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">y</p>
+                    <p class="parameter-type">double</p>
+                </div>
+            </div>
+        </div>
+        
         <div class="datastructure">
             <h2 class="name">Image</h2>
             <p class="description">Represents a captured image.</p>
@@ -51,12 +67,8 @@
             <p class="description">Represents a rectangular region of interest.</p>
             <div class="parameters">
                 <div>
-                    <p class="parameter-name">x</p>
-                    <p class="parameter-type">double</p>
-                </div>
-                <div>
-                    <p class="parameter-name">y</p>
-                    <p class="parameter-type">double</p>
+                    <p class="parameter-name">origin</p>
+                    <p class="parameter-type">Point</p>
                 </div>
                 <div>
                     <p class="parameter-name">width</p>
@@ -74,12 +86,8 @@
             <p class="description">Represents a circular region of interest.</p>
             <div class="parameters">
                 <div>
-                    <p class="parameter-name">x</p>
-                    <p class="parameter-type">double</p>
-                </div>
-                <div>
-                    <p class="parameter-name">y</p>
-                    <p class="parameter-type">double</p>
+                    <p class="parameter-name">origin</p>
+                    <p class="parameter-type">Point</p>
                 </div>
                 <div>
                     <p class="parameter-name">radius</p>
@@ -142,6 +150,48 @@
                 <p>local img = GrabImage(1)</p>
                 <p>local roiCircle = CreateROI(100, 100, 50)</p>
                 <p>local circle = FindCircle(img, roiCircle)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">FindAllCircles</h2>
+            <p class="description">Detects all circles in an image within a circular region.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+                <div>
+                    <p class="parameter-name">roi</p>
+                    <p class="parameter-type">ROI_circle</p>
+                </div>
+            </div>
+            <div class="return">ROI_circle[]</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local roiCircle = CreateROI(100, 100, 50)</p>
+                <p>local circles = FindAllCircles(img, roiCircle)</p>
+            </div>
+        </div>
+        
+        <div class="function">
+            <h2 class="name">FindAllCircles</h2>
+            <p class="description">Detects all circles in an image within a rectangular region.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+                <div>
+                    <p class="parameter-name">roi</p>
+                    <p class="parameter-type">ROI_rect</p>
+                </div>
+            </div>
+            <div class="return">ROI_circle[]</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local roiRect = CreateROI(100, 100, 50, 50)</p>
+                <p>local circles = FindAllCircles(img, roiRect)</p>
             </div>
         </div>
 
