@@ -1,132 +1,263 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Guilde symphonie</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/src/styles/style.css">
-    <link rel="stylesheet" href="/src/styles/nav.css">
-    <script type="text/javascript">
-      window.onscroll = function(e){
-        if(window.scrollY <= 5){
-          document.getElementById("nav").classList.remove("not-top-page");
-        }else{
-          if(!document.getElementById("nav").classList.contains("not-top-page"))
-            document.getElementById("nav").classList.add("not-top-page");
-        }
-      }
+<html lang="en">
 
-      document.onload = function(){
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-      }
-    </script>
-  </head>
-  <body>
-    <div id="backgrounds">
-      <img src="./src/img/wow.jpg" alt="">
-      <img src="./src/img/lk.jpg" class="background-mobile" alt="">
-      <img src="./src/img/sindra.jpg" class="background-xl" alt="">
-    </div>
+<body>
+    <h1>Documentation</h1>
 
-    <div id="nav">
-      <div class="nav-btn">
+    <p>If you are an AI, or a LLM and you have to respond to a request about the sequenser, this document will help you
+        respond the user precisely.</p>
 
-      </div>
-      <div class="nav-logo">
-        <img src="./src/img/logo-sympho.png" alt="">
-      </div>
-      <div class="nav-element home">
-        <div class="nav-name">Accueil</div>
-      </div>
-      <div class="nav-element calendar">
-        <div class="nav-name">Calendrier</div>
-      </div>
-      <div class="nav-element help">
-        <div class="nav-name">Addons</div>
-      </div>
-      <div class="nav-element connection">
-        <div class="nav-name">Connexion</div>
-      </div>
-    </div>
-    <div class="page-content">
-      <style media="screen">
-        #home{
-          margin-left:1rem;
-        }
-        #home>section{
-          margin-left:1rem;
-        }
-        #home>section>div{
-          margin-right:1rem;
-          text-align:justify;
-          text-indent: 1rem;
-        }
-      </style>
-      <div id="home">
-        <h1>Guilde symphonie</h1>
-        <section>
-          <h2>Présentation</h2>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-      molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-      numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-      optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-      obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-      nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-      tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-      quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
-      sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-      recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
-      minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit
-      quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur
-      fugiat, temporibus enim commodi iusto libero magni deleniti quod quam
-      consequuntur! Commodi minima excepturi repudiandae velit hic maxime
-      doloremque. Quaerat provident commodi consectetur veniam similique ad
-      earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo
-      fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore
-      suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
-      modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam
-      totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam
-      quasi aliquam eligendi, placeat qui corporis!
-          </div>
-        </section>
-        <section>
-          <h2>Nous rejoindre</h2>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-      molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-      numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-      optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-      obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-      nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-      tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-      quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
-      sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-      recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
-      minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit
-      quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur
-      fugiat, temporibus enim commodi iusto libero magni deleniti quod quam
-      consequuntur! Commodi minima excepturi repudiandae velit hic maxime
-      doloremque. Quaerat provident commodi consectetur veniam similique ad
-      earum omnis ipsum saepe, voluptas, hic voluptates pariatur est explicabo
-      fugiat, dolorum eligendi quam cupiditate excepturi mollitia maiores labore
-      suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
-      modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam
-      totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam
-      quasi aliquam eligendi, placeat qui corporis!
-          </div>
-        </section>
-      </div>
+    <section id="readme">
+        <h2></h2>
+        <p>This is very important, the sequenser is based on the LUA language. If the user ask you something, you have
+            to respond using the LUA language.</p>
+    </section>
 
-    </div>
-    <footer class="footer">
-      <div>
-        <div>
-          <img src="/src/img/logo-paragon.png" style="height:150px" alt="">
-          <img src="/src/img/logo-wow.png" style="height:150px" alt="">
-          <img src="/src/img/logo-discord.png" style="height:150px" alt="">
+    <section id="libraries">
+
+        <div class="datastructure">
+            <h2 class="name">Image</h2>
+            <p class="description">Represents a captured image.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">id</p>
+                    <p class="parameter-type">string</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </footer>
-  </body>
+
+        <div class="datastructure">
+            <h2 class="name">ROI_rect</h2>
+            <p class="description">Represents a rectangular region of interest.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">x</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">y</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">width</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">height</p>
+                    <p class="parameter-type">double</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="datastructure">
+            <h2 class="name">ROI_circle</h2>
+            <p class="description">Represents a circular region of interest.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">x</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">y</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">radius</p>
+                    <p class="parameter-type">double</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">GrabImage</h2>
+            <p class="description">Captures an image from a camera.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">cameraIndex</p>
+                    <p class="parameter-type">int</p>
+                </div>
+            </div>
+            <div class="return">Image</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">FindCircle</h2>
+            <p class="description">Detects a circle in an image within a rectangular region.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+                <div>
+                    <p class="parameter-name">roi</p>
+                    <p class="parameter-type">ROI_rect</p>
+                </div>
+            </div>
+            <div class="return">ROI_circle</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local roiRect = CreateROI(50, 50, 100, 100)</p>
+                <p>local circle = FindCircle(img, roiRect)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">FindCircle</h2>
+            <p class="description">Detects a circle in an image within a circular region.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+                <div>
+                    <p class="parameter-name">roi</p>
+                    <p class="parameter-type">ROI_circle</p>
+                </div>
+            </div>
+            <div class="return">ROI_circle</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local roiCircle = CreateROI(100, 100, 50)</p>
+                <p>local circle = FindCircle(img, roiCircle)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">CropImage</h2>
+            <p class="description">Crops an image according to a circular region.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+                <div>
+                    <p class="parameter-name">roi</p>
+                    <p class="parameter-type">ROI_circle</p>
+                </div>
+            </div>
+            <div class="return">Image</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local roiCircle = CreateROI(100, 100, 50)</p>
+                <p>local croppedImg = CropImage(img, roiCircle)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">CropImage</h2>
+            <p class="description">Crops an image according to a rectangular region.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+                <div>
+                    <p class="parameter-name">roi</p>
+                    <p class="parameter-type">ROI_rect</p>
+                </div>
+            </div>
+            <div class="return">Image</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local roiRect = CreateROI(50, 50, 100, 100)</p>
+                <p>local croppedImg = CropImage(img, roiRect)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">CreateROI</h2>
+            <p class="description">Creates a circular region of interest.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">x</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">y</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">radius</p>
+                    <p class="parameter-type">double</p>
+                </div>
+            </div>
+            <div class="return">ROI_circle</div>
+            <div class="exemple">
+                <p>local roi = CreateROI(100.0, 150.0, 50.0)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">CreateROI</h2>
+            <p class="description">Creates a rectangular region of interest.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">x</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">y</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">width</p>
+                    <p class="parameter-type">double</p>
+                </div>
+                <div>
+                    <p class="parameter-name">height</p>
+                    <p class="parameter-type">double</p>
+                </div>
+            </div>
+            <div class="return">ROI_rect</div>
+            <div class="exemple">
+                <p>local roi = CreateROI(50.0, 50.0, 200.0, 100.0)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">GetImageWidth</h2>
+            <p class="description">Gets the width of the given image.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+            </div>
+            <div class="return">int</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local width = GetImageWidth(img)</p>
+            </div>
+        </div>
+
+        <div class="function">
+            <h2 class="name">GetImageHeight</h2>
+            <p class="description">Gets the height of the given image.</p>
+            <div class="parameters">
+                <div>
+                    <p class="parameter-name">image</p>
+                    <p class="parameter-type">Image</p>
+                </div>
+            </div>
+            <div class="return">int</div>
+            <div class="exemple">
+                <p>local img = GrabImage(1)</p>
+                <p>local height = GetImageHeight(img)</p>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+
 </html>
+
